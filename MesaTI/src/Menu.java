@@ -75,12 +75,14 @@ public class Menu extends javax.swing.JFrame {
 
         btnregistrar.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnregistrar.setText("REGISTRAR INCIDENTE");
+        btnregistrar.addActionListener(this::btnregistrarActionPerformed);
 
         btnreportes.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnreportes.setText("REPORTES");
 
         btnincidentes.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnincidentes.setText("VER INCIDENTES");
+        btnincidentes.addActionListener(this::btnincidentesActionPerformed);
 
         btnusuarios.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnusuarios.setText("USUARIOS");
@@ -204,6 +206,19 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnregistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnregistrarActionPerformed
+        Incidente.incidente ventana = new Incidente.incidente();
+    menu.add(ventana);
+    ventana.setVisible(true);
+    }//GEN-LAST:event_btnregistrarActionPerformed
+
+    private void btnincidentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnincidentesActionPerformed
+       Ver_Inci.verInci ventana = new Ver_Inci.verInci();
+       menu.add(ventana);
+       ventana.setSize(600,400);
+       ventana.setVisible(true);
+    }//GEN-LAST:event_btnincidentesActionPerformed
 
     /**
      * @param args the command line arguments
